@@ -2,10 +2,13 @@
 /Users/giyeonpak/Desktop/B.DEVELOPER/02.Back-End/glog/src/main/java/com/ihchoco/glog/member/application/provided/MemberRegister.java
 /Users/giyeonpak/Desktop/B.DEVELOPER/02.Back-End/glog/src/main/java/com/ihchoco/glog/member/application/provided/MemberRegisterService.java
 /Users/giyeonpak/Desktop/B.DEVELOPER/02.Back-End/glog/src/main/java/com/ihchoco/glog/member/application/provided/dto/MemberRegisterInfo.java
+/Users/giyeonpak/Desktop/B.DEVELOPER/02.Back-End/glog/src/main/java/com/ihchoco/glog/member/application/provided/dto/MemberUpdateInfo.java
 /Users/giyeonpak/Desktop/B.DEVELOPER/02.Back-End/glog/src/main/java/com/ihchoco/glog/member/application/required/MemberRepository.java
+/Users/giyeonpak/Desktop/B.DEVELOPER/02.Back-End/glog/src/main/java/com/ihchoco/glog/member/domain/Email.java
 /Users/giyeonpak/Desktop/B.DEVELOPER/02.Back-End/glog/src/main/java/com/ihchoco/glog/member/domain/Member.java
 /Users/giyeonpak/Desktop/B.DEVELOPER/02.Back-End/glog/src/main/java/com/ihchoco/glog/member/domain/MemberType.java
 /Users/giyeonpak/Desktop/B.DEVELOPER/02.Back-End/glog/src/main/java/com/ihchoco/glog/member/domain/MemberTypeConverter.java
+/Users/giyeonpak/Desktop/B.DEVELOPER/02.Back-End/glog/src/main/java/com/ihchoco/glog/member/domain/Password.java
 /Users/giyeonpak/Desktop/B.DEVELOPER/02.Back-End/glog/src/main/java/com/ihchoco/glog/member/domain/dto/MemberRegisterRequest.java
 /Users/giyeonpak/Desktop/B.DEVELOPER/02.Back-End/glog/src/main/java/com/ihchoco/glog/member/domain/dto/MemberUpdateRequest.java
 /Users/giyeonpak/Desktop/B.DEVELOPER/02.Back-End/glog/src/main/java/com/ihchoco/glog/util/configuration/JpaAuditingConfig.java

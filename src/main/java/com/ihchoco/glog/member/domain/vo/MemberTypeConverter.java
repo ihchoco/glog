@@ -1,4 +1,4 @@
-package com.ihchoco.glog.member.domain;
+package com.ihchoco.glog.member.domain.vo;
 
 import jakarta.persistence.AttributeConverter;
 import jakarta.persistence.Converter;

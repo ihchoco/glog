@@ -1,14 +1,13 @@
 package com.ihchoco.glog.member.application.required;
 
 import com.ihchoco.glog.member.domain.Member;
-import com.ihchoco.glog.member.domain.MemberType;
 import com.ihchoco.glog.member.domain.dto.MemberRegisterRequest;
 import com.ihchoco.glog.member.domain.dto.MemberUpdateRequest;
 import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
-import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
-import org.springframework.test.annotation.Rollback;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.TestConstructor;
 import org.springframework.transaction.annotation.Transactional;
@@ -20,14 +19,20 @@ import static com.ihchoco.glog.util.TestFixture.createMemberUpdateRequest;
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 @ActiveProfiles("test")
 @Transactional
-@DataJpaTest
+// @DataJpaTest // # 기존에는 사용가능했지만, JPA Auditor 추가되었기에 SpringBootTest로 변경 (No bean named 'auditorAware' available 에러 방지)
+@SpringBootTest
 @TestConstructor(autowireMode = TestConstructor.AutowireMode.ALL)
 record MemberRepositoryTest(
     MemberRepository memberRepository
 ) {
 
+    @BeforeEach
+    void before() {
+        memberRepository.deleteAll();
+    }
+
     @Test
-    @Rollback(value = false)
+    // @Rollback(value = false)
     void registerMember(){
         Member member = saveMember();
 
@@ -35,7 +40,6 @@ record MemberRepositoryTest(
     }
 
     @Test
-    @Rollback(value = false)
     void updateMember(){
         Member member = saveMember();
 

@@ -1,12 +1,13 @@
 package com.ihchoco.glog.member.application.provided.dto;
 
-import com.ihchoco.glog.member.domain.MemberType;
+import com.ihchoco.glog.member.domain.vo.MemberType;
+import jakarta.validation.constraints.NotNull;
 
 public record MemberRegisterInfo(
-         String memberId,
-         String nickname,
-         String password,
-         String email,
-         MemberType memberType
+         @NotNull String memberId,
+         @NotNull String nickname,
+         @NotNull String password,
+         @NotNull String email,
+         @NotNull MemberType memberType
 ) {
 }
